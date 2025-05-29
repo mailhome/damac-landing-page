@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Logo from "./logo";
-import { ArrowRight, Download } from "lucide-react"
+import { Download } from "lucide-react"
+import { TbHandFingerRight } from "react-icons/tb"
+import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
@@ -21,25 +23,28 @@ export default function Hero() {
             <div className="w-10/12 mx-auto text-white text-lg md:w-8/12 md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-center font-semibold hidden md:block">
               Modern appartments, vilas and town, houses in Dubai from USD 354,000* 
             </div>
-          <div className="flex items-center justify-center flex-col gap-4 lg:gap-10 w-10/12 mx-auto md:flex-row">
-            <Link href="w-full">
-              <button
-              className="rounded-full w-full text-neutral-600 py-1.5 text-center border-b flex justify-center items-center bg-white hover:bg-white/20 uppercase text-md px-6 gap-3 md:text-sm lg:text-2xl lg:px-10 lg:py-2 xl:py-4 xl:text-3xl">
-                <span className="">
+          <div className="flex items-center justify-center flex-col gap-4 lg:gap-10 w-8/12 mx-auto md:flex-row">
+
+            <Link  href="#" className="w-full">
+              <Button
+                variant="outline" 
+                className="rounded-md w-full text-neutral-600 py-1.5 2xl:h-14 text-center border-b flex justify-center items-center bg-white hover:bg-white/20 uppercase text-md px-6 gap-3 md:text-sm lg:text-2xl lg:px-10 lg:py-2 xl:py-4 xl:text-3xl">
+                  <span className="">
                   <Download className="size-4 xl:size-6" />
                 </span>
                  download bronchure
-              </button>
+              </Button>
             </Link>
 
-            <Link href="w-full">
-              <button
-              className="rounded-full w-full text-white py-1.5 text-center border flex justify-center items-center bg-transparent hover:bg-transparent/25 uppercase text-md px-12 gap-3 md:text- lg:text-2xl lg:px-16 lg:py-2 xl:py-4 xl:text-3xl">
-                <span className="">
-                  <ArrowRight className="size-4" />
-                </span>
-                 Enquire now
-              </button>
+            <Link  href="#" className="w-full">
+              <Button
+                variant="outline" 
+                className="rounded-md w-full text-white py-1.5 2xl:h-14 text-center border flex justify-center items-center bg-transparent hover:bg-transparent/25 uppercase text-md px-24 gap-3 md:text- lg:text-2xl lg:px-16 lg:py-2 xl:py-4 xl:text-3xl">
+                  <TbHandFingerRight className="size-4 xl:size-10" />
+                  <span className="">
+                    Enquire now
+                  </span>
+              </Button>
             </Link>
             </div>
           </div>
