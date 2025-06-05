@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import {  Anek_Latin } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer/footer";
+
 
 const aneklatin = Anek_Latin({
   subsets: ["latin"]
@@ -20,12 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aneklatin.className} min-h-screen flex flex-col antialiased`}
+        className={`${aneklatin.className} `}
       >
-        <div className="flex-1 h-full">
           {children}
-        </div>
-        <Footer />
       </body>
     </html>
   );
