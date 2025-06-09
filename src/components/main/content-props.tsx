@@ -1,4 +1,4 @@
-import WidthContainer from "../width-container";
+
 
 
 type Props = {
@@ -12,19 +12,20 @@ export const ContentProps = ({
     content, 
 }: Props) => {
     return (
-        <WidthContainer>
-            <div className="w-full py-10 md:py-16 xl:py-24">
-                <div className="flex flex-col lg:items-center gap-1 lg:justify-center items-start justify-start">
-                    <h1 className="text-lg text-center w-full mx-auto uppercase text-[#041710]">{title}</h1>
-                    <p className="mx-auto text-[10px] w-full text-center">
-                        {label}
-                    </p>    
+            <div className="width-container py-2 md:py-5 xl:py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-12 ">
+                    <div className="col-span-4 w-full xl:w-10/12">
+                        <h1 className="capitalize text-left md:w-full md:mx-0 text-sm sm:text-md md:text-left md:text-lg lg:text-2xl lg:w-10/12 xl:w-10/12 xl:text-xl 2xl:text-2xl  text-[#041710] font-semibold">{title}</h1>
+                    </div>
+                    <div className="col-span-8 mx-0 flex items-start justify-start">
+                        <p className="mx-auto xl:text-base text-[10px] w-full text-left col-span-8">
+                         {label}
+                        </p>   
+                    </div>
                 </div>
-                <div className="w-full">
-                    {content}
-                </div>  
-
+                <div className="w-full h-full pt-6">
+                    {content}  
+                </div>
             </div>
-        </WidthContainer>
     );
 }
