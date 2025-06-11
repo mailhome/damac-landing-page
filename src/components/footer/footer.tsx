@@ -107,8 +107,7 @@ export default function Footer() {
   return (
     <div className="bg-[url('/bg-about.avif')] bg-center bg-cover w-full h-auto">
       <div className="bg-[rgb(4,23,16)] opacity-90 h-full w-full py-10 md:py-16 xl:py-10">
-        <WidthContainer>
-          <div className="w-full">
+          <div className="w-full width-container">
             <Logo />
             <div className="w-full grid grid-cols-1 xl:grid-cols-4 justify-evenly xl:gap-10 gap-6 2xl:mt-10 py-6">
                   {topItem.map((item) => (
@@ -151,7 +150,6 @@ export default function Footer() {
               <p>&copy;DAMAC Copyright 2025 All rights reserved.</p>
             </div>
           </div>
-        </WidthContainer>
       </div>
     </div>
   )
@@ -197,8 +195,6 @@ const FooterTop = ({
     </>
   )
 }
-
-
 
 interface FooterBottomProps  {
   branch: string;

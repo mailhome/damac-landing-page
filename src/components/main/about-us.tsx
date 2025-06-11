@@ -50,7 +50,7 @@ export default function AboutUs() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reprehenderit repudiandae exercitationem optio officiis dolore officia in dignissimos. Distinctio ea neque, sapiente dolores ipsa perspiciatis quae esse inventore expedita natus.
                       </p>
                       <p className='text-[11px] sm:text-sm lg:text-lg xl:text-sm 2xl:w-10/12'>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut in molestias repudiandae eum commodi quia ea, alias quo. Accusantium earum eligendi aspernatur maxime tenetur consequatur reiciendis magnam eveniet. Officiis, itaque.
+                        Lorem  ipsum dolor sit, amet consectetur adipisicing elit. Ut in molestias repudiandae eum commodi quia ea, alias quo. Accusantium earum eligendi aspernatur maxime tenetur consequatur reiciendis magnam eveniet. Officiis, itaque.
                       </p>
                   </div>
                 </div> 
