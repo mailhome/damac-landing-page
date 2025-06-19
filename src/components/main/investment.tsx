@@ -49,7 +49,7 @@ const items = [
 export default function Investment () {
   return (
     <div className='w-full h-auto my-16'>
-      <h1 className='text-5xl font-medium uppercase flex items-center justify-center-safe text-[#041710]'>
+      <h1 className='text-5xl md:text-4xl font-medium uppercase flex items-center justify-center-safe text-[#041710]'>
         Why Dubai?
       </h1>
       <div className="mt-10 w-full width-container">

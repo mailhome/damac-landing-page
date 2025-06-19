@@ -3,6 +3,7 @@ import Collaborators from "@/components/main/collaborators";
 import DemacGallery from "@/components/main/demac-gallery";
 import Download from "@/components/main/download";
 import ExploreDemac from "@/components/main/explore-demac"
+import FormContent from "@/components/main/form-content";
 import Foundations from "@/components/main/foundations";
 import Hero from "@/components/main/hero";
 import Investment from "@/components/main/investment";
@@ -22,6 +23,7 @@ export default function Home() {
       <Foundations />
       <Download />
       <Investment />
+      <FormContent />
     </main>
   );
 }

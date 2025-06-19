@@ -85,8 +85,8 @@ const items = [
 ]
 const ExploreContent = () => {
   return (
-    <div className='w-full mt-10'>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div className='w-full md:mt-0 mt-10'>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-10">
         {items.map((item) => (
           <ExploreContentItems 
           key={item.imgSrc} 
@@ -101,11 +101,11 @@ const ExploreContent = () => {
         <p className='text-center'>
           Explore DAMAC townhouses in Dubai, exquisite DAMAC villas, and off-plan projects that redefine modern luxury. With flexible DAMAC payment plans and prime locations, investing in DAMAC real estate has never been more accessible.
         </p>
-        <Link href="#" className='md:w-auto w-full'>
+        <Link href="#" className='md:w-auto justify-center flex items-center w-full'>
           <Button
-          className="rounded-md bg-[#A46C3E]  border flex justify-start items-center text-white hover:bg-white  hover:text-[#A46C3E] gap-3 md:text-md lg:text-2xl lg:px-16 lg:py-2 xl:py-4 xl:text-lg xl:h-10">
-            <TbHandFingerRight className="size-4 md:size-6 xl:size-6" />
-            <span className="">
+          className="rounded-md bg-[#A46C3E]  border flex justify-start items-center text-white hover:bg-white  hover:text-[#A46C3E] gap-3 md:text-md lg:text-2xl lg:px-16 lg:py-2 xl:py-4 xl:text-lg h-10  xl:h-10">
+            <TbHandFingerRight className="size-6 md:size-6 xl:size-6" />
+            <span className="text-lg">
               Explore our products now
              </span>
             </Button>
@@ -134,7 +134,7 @@ const ExploreContentItems = ({
   return (
     <div className='w-full h-auto'>
       <div className="w-full flex flex-col items-start justify-start h-auto">
-        <div className="flex items-center justify-center w-full h-48 relative ">
+        <div className="flex items-center justify-center w-full h-80 md:h-56 xl:h-48 relative ">
           <Image 
           src={imgSrc}
           alt={location}
@@ -144,20 +144,20 @@ const ExploreContentItems = ({
         <div className="bg-neutral-200/50 w-full rounded-b-2xl">
           <div className="py-2 ">
             <div className="flex flex-col pl-4 items-start justify-start gap-2 py-2">
-              <p className='text-xl font-semibold text-[#041710]'>{label}</p>
-              <div className="flex items-center justify-start gap-2">
-                <MapPin className='size-4' />
-                <p className=''>{location}</p>
+              <p className='text-2xl md:text-xl xl:text-xl font-semibold text-[#041710]'>{label}</p>
+              <div className="flex items-center justify-start gap-1">
+                <MapPin className='xl:size-4 size-4' />
+                <p className='text-lg xl:text-base'>{location}</p>
               </div>
-              <p className='text-[#A46C3E] font-semibold uppercase'>From {price}</p>
+              <p className='text-[#A46C3E] text-lg xl:text-base font-semibold uppercase'>From {price}</p>
             </div>
             <Separator className='text-white'/>
             <div className="">
               <Link 
               href={href} 
               className='text-[#041710] pl-4 py-2 hover:bg-neutral-200 flex items-center justify-start gap-x-2'>
-                <TbHandFingerRight className="size-4 md:size-6 xl:size-6" />
-                <span className='text-lg font-semibold'>Explore</span>
+                <TbHandFingerRight className="size-6 md:size-6 xl:size-6" />
+                <span className='text-xl md:text-xl font-semibold'>Explore</span>
               </Link>
             </div>
           </div>

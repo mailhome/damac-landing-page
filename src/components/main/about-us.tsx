@@ -29,32 +29,32 @@ export default function AboutUs() {
   return (
     <div className='w-full h-auto'> 
         <div className="h-full w-full py-5 md:py-16 xl:py-24 width-container">
-                <div className="grid grid-cols-1 text-black lg:grid-cols-12 gap-10 w-full ">
-                  <div className="w-full col-span-4 flex items-start justify-start gap-2 flex-col">
-                    <h1 className='capitalize text-left md:w-full md:mx-0 text-sm sm:text-md md:text-left md:text-lg lg:text-2xl lg:w-10/12 xl:w-10/12 xl:text-3xl 2xl:text-2xl '>
+                <div className="grid grid-cols-1 text-black lg:grid-cols-12 gap-10 w-full xl:grid-cols-12 justify-between">
+                  <div className="w-full lg:col-span-4 col-span-12  flex lg:items-start lg:justify-start gap-3 flex-col justify-center items-center">
+                    <h1 className='capitalize lg:text-left md:w-10/12 md:mx-auto text-2xl sm:text-3xl text-center md:text-3xl lg:text-3xl lg:w-full xl:w-10/12 xl:text-3xl 2xl:text-4xl font-medium w-full '>
                         A legacy of excellence in luxury real estate
                       </h1>
-                       <Link href="#" className='md:w-auto w-full'>
+                       <Link href="#" className='hidden lg:block md:w-auto w-full xl:mt-4'>
                           <Button
-                          className="rounded-md bg-[#A46C3E]  border flex justify-start items-center text-white hover:bg-transparent/25 gap-3 md:text-md lg:text-2xl lg:px-16 lg:py-2 xl:py-4 xl:text-xl xl:h-8">
+                          className="rounded-md bg-[rgb(22, 23, 23)] border flex justify-start items-center text-white hover:bg-transparent/25 gap-3 md:text-md lg:text-2xl lg:px-16 lg:py-2 xl:py-4 xl:text-xl xl:h-8">
                             <TbHandFingerRight className="size-4 md:size-6 xl:size-6" />
                             <span className="">
                               Know Now
                             </span>
-                          </Button>
+                          </Button> 
                       </Link>
                   </div>
-                  <div className="w-full col-span-8 flex items-start flex-col justify-start gap-2">
-                    <p className='text-[11px] sm:text-sm lg:text-lg xl:text-sm 2xl:w-10/12 '>
+                  <div className="w-full lg:col-span-8 col-span-12 flex items-start flex-col justify-end -mt-6 lg:mt-0 gap-2">
+                    <p className='text-md sm:text-md lg:text-sm xl:text-base '>
                         DAMAC Properties, a part of the prestigious DAMAC Group, has been redefining the luxury real estate landscape in the Middle East since 1982, offering a portfolio of iconic residential, commercial, and leisure properties across the region and beyond.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reprehenderit repudiandae exercitationem optio officiis dolore officia in dignissimos. Distinctio ea neque, sapiente dolores ipsa perspiciatis quae esse inventore expedita natus.
                       </p>
-                      <p className='text-[11px] sm:text-sm lg:text-lg xl:text-sm 2xl:w-10/12'>
+                      <p className='text-md sm:text-md lg:text-sm xl:text-base '>
                         Lorem  ipsum dolor sit, amet consectetur adipisicing elit. Ut in molestias repudiandae eum commodi quia ea, alias quo. Accusantium earum eligendi aspernatur maxime tenetur consequatur reiciendis magnam eveniet. Officiis, itaque.
                       </p>
                   </div>
                 </div> 
-                <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-3 w-full gap-10 mt-10">
+                <div className="grid grid-cols-1 h-[1200px] md:h-[1800px] lg:h-[500px] xl:h-[600px] lg:grid-cols-3 xl:grid-cols-3 w-full gap-10 mt-10">
                     {images.map((image) => (
                       <ImageItem 
                       key={image.alt} 
@@ -78,7 +78,7 @@ const ImageItem = ({
   imageSrc
 }: ImageItemProps) =>  {
   return (
-    <div className='w-full xl:h-[400px] relative rounded-md'>
+    <div className='w-full xl:h-full relative rounded-md'>
       <Image 
       src={imageSrc} 
       alt= {alt} 

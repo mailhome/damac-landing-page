@@ -2,7 +2,6 @@
 
 import React from 'react'
 
-import WidthContainer from '../width-container'
 import Logo from '../main/logo'
 import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
@@ -109,7 +108,7 @@ export default function Footer() {
       <div className="bg-[rgb(4,23,16)] opacity-90 h-full w-full py-10 md:py-16 xl:py-10">
           <div className="w-full width-container">
             <Logo />
-            <div className="w-full grid grid-cols-1 xl:grid-cols-4 justify-evenly xl:gap-10 gap-6 2xl:mt-10 py-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 md:gap-12 xl:grid-cols-4 justify-evenly xl:gap-16 gap-10 2xl:mt-10 py-6">
                   {topItem.map((item) => (
                     <FooterTop 
                     key={item.callhref} 
@@ -121,8 +120,8 @@ export default function Footer() {
                    />
                   )) }
             </div> 
-            <Separator  />
-            <div className="w-full grid grid-cols-1 xl:grid-cols-4 justify-evenly xl:gap-10 gap-6 2xl:mt-10 my-8">
+            <Separator className='bg-amber-400 h-2' />
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 md:not-last:gap-12 xl:grid-cols-4 justify-evenly xl:gap-x-16 xl:gap-y-10 gap-6 2xl:mt-10 my-8">
                   {lowerItem.map((item) => (
                     <FooterBottom 
                     key={item.address}
@@ -130,11 +129,11 @@ export default function Footer() {
                     branch={item.branch} />
                   ))}
             </div>
-            <Separator  />
-            <div className="2xl:py-6 py-2">
-              <div className="flex gap-2 items-center justify-start xl:gap-8">
-                <span className='text-amber-400 text-sm xl:text-2xl'>Follow Us On:</span>
-                <div className="flex justify-start xl: gap-2 lg:gap-6 items-center">
+            <Separator className='bg-amber-400 h-2'   />
+            <div className="2xl:py-6 py-2 md:py-10">
+              <div className="flex gap-10 items-center justify-start xl:gap-8">
+                <span className='text-amber-400 text-xl xl:text-2xl'>Follow Us On:</span>
+                <div className="flex justify-start gap-8  lg:gap-6 xl:gap-10 items-center">
                   {socialItem.map((item) => (
                     <SocialItem 
                     key={item.href} 
@@ -144,10 +143,10 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <Separator  />
-            <div className='pt-4 text-white text-[10px] w-11/12 mx-auto text-center'>
-              <p>This site&apos;s security is ensured by reCAPTCHA. Furthermore, the DAMAC Privacy Policy, Terms of Service, and Cookie Policy are also relevant and applicable.</p>
-              <p>&copy;DAMAC Copyright 2025 All rights reserved.</p>
+            <Separator className='bg-amber-400 h-2' />
+            <div className='py-10 text-white text-[10px] w-11/12 xl:w-8/12 mx-auto text-center'>
+              <p className='text-base xl:mt-8 xl:text-[12px]'>This site&apos;s security is ensured by reCAPTCHA. Furthermore, the DAMAC Privacy Policy, Terms of Service, and Cookie Policy are also relevant and applicable.</p>
+              <p className='text-base xl:text-[12px]'>&copy;DAMAC Copyright 2025 All rights reserved.</p>
             </div>
           </div>
       </div>
@@ -174,21 +173,21 @@ const FooterTop = ({
   return (
     <>
     <div className='flex flex-col items-start justify-start text-white gap-3 xl:gap-4'>
-        <h2 className='text-sm xl:text-xl 2xl:text-2xl font-medium'>
+        <h2 className='text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium'>
           {branch}
         </h2>
-        <p className='text-xs md:text-xs'>
+        <p className='text-lg md:text-lg xl:text-base'>
           {address}
         </p>
         <Link 
         href={callHref}
-        className={cn('flex items-center justify-center xl:py-2 gap-2 xl:mt-4', 
-        callHref === "/damac-main" && "2xl:mt-10", callHref === "/damac-beirut" && "2xl:-mt-2")}>
+        className={cn('flex items-center justify-center xl:py-2 gap-2 xl:mt-0', 
+        callHref === "/damac-main" && "2xl:mt-1", callHref === "/damac-beirut" && "-mt-0")}>
           <Button 
           variant="ghost"
-          className='border rounded-md xl:py-2 h-8 lg:h-10 border-emerald-100/50 xl:px-16 hover:text-emerald-900 hover:bg-white'>
-              <Icon className='size-3 xl:size-4 2xl:size-4' />
-              <p className='text-sm 2xl:text-lg' >{label}</p>
+          className='border rounded-md xl:py-2 h-10 2xl:h-8 lg:h-10 border-emerald-100/50 xl:px-16 hover:text-emerald-900 hover:bg-white'>
+              <Icon className='size-4 md:size-6 xl:size-4 2xl:size-4' />
+              <p className='text-lg md:text-xl 2xl:text-lg' >{label}</p>
           </Button>
         </Link>
     </div>
@@ -207,10 +206,10 @@ const FooterBottom = (
   
 }: FooterBottomProps ) => (
   <div className='flex flex-col items-start justify-start text-white gap-1 xl:gap-4'>
-        <h2 className='text-sm xl:text-xl 2xl:text-2xl font-medium'>
+        <h2 className='text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium'>
           {branch}
         </h2>
-        <p className='text-xs md:text-xs'>
+        <p className='text-lg md:text-lg xl:text-base'>
           {address}
         </p>
     </div>
@@ -226,11 +225,11 @@ const SocialItem = ({
   href
 }: SocialItemProps) => {
   return (
-    <div className="lg:h-10 lg:w-10 lg:bg-yellow-600 p-1 lg:p-4 rounded-full flex justify-center items-center">x
+    <div className="lg:h-10 lg:w-10 lg:bg-yellow-600 p-1 lg:p-4 rounded-full flex justify-center items-center">
       <Link href={href} 
       className='cursor-pointer.'
       passHref>
-        <Icon className='text-white/80 size-4 lg::size-8 lg:p-1.5' />
+        <Icon className='text-white/80 size-6 md:size-10 xl:size-10 xl:p-2 lg:size-8 lg:p-1.5' />
       </Link>
     </div>
   )

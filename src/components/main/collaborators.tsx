@@ -69,28 +69,28 @@ export default function Collaborators() {
 
 const CollaboratorsContent = () => {
   return (
-    <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:gap-10'>
+    <div className='w-full grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:gap-10'>
       {items.map((item, i) => (
         <div key={i} 
-        className="w-full 2xl:h-[50vh] relative">
+        className="w-full h-[70vh] md:h-[60vh] lg:h-[50vh] 2xl:h-[50vh] relative">
             <Image 
             src={item.imgSrc} 
             alt={item.label} 
             fill 
             className='absolute rounded-lg  object-cover' /> 
             <div className="h-full w-full bg-black/30 absolute">
-                <div className="flex py-5 items-center justify-between w-full h-full flex-col">
+                <div className="flex py-10 2xl:py-5 items-center justify-between w-full h-full flex-col">
                     <div className="flex items-center justify-center w-full">
                         <Image 
                         src={item.logo}
                         alt={item.label}
-                        height={130}
-                        width={130}
+                        height={200}
+                        width={200}
                         className='' />
                     </div>
                     <div className="flex items-center flex-col justify-center gap-2 w-11/12 mx-auto text-center text-lg">
-                        <h2 className='font-semibold text-2xl text-white'>{item.label}</h2>
-                        <p className='text-white w-10/12 mx-auto text-center text-lg'>{item.desc}</p>
+                        <h2 className='font-semibold text-3xl md:text-2xl lg:text-2xl 2xl:text-2xl text-white'>{item.label}</h2>
+                        <p className='text-white w-8/12 md:w-11/12 2xl:w-10/12 mx-auto text-center text-lg'>{item.desc}</p>
                     </div>
                 </div>
             </div>
