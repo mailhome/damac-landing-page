@@ -163,7 +163,7 @@ const DemacGalleryContent = () => {
         ))}
       </div>
       <div className="flex items-center justify-center w-full gap-2">
-          <div className="absolute -bottom-8 right-0 left-0">
+          <div className="absolute bottom-4 right-0 left-0">
         <div className="flex items-center justify-center gap-2">
           {carousels.map((_, i) => (
             <div 
