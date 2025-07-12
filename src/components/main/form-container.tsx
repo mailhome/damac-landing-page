@@ -15,13 +15,13 @@ const options = [
         { value: "mrs",  label: "Mrs"},
     ]
 
-export default function FormContainer() {
+export const  FormContainer = () => {
     const [selectedOption, setSelectedOption] = useState("");
     const  [phone, setPhone] = useState("");
     
 
     const handleChange = (value) => {
-        setSelectedOption(value);w
+        setSelectedOption(value);
     }
 
     const handleSubmit = (e) => {
