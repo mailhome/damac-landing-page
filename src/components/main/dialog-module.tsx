@@ -30,7 +30,7 @@ const options = [
     
 
     export default function DialogModule({
-        triggerContent
+        triggerContent, 
     }: DialogModuleProps) {
         const [open, setOpen] = useState(false);
         const [hasScrolled, setHasScrolled] = useState(false);
@@ -50,7 +50,7 @@ const options = [
         }, [hasScrolled]) 
 
         
-        const handleChange = (value) => {
+        const handleChange = (value: string) => {
                 setSelectedOption(value);
             }
         

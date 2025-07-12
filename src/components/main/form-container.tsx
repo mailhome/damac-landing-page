@@ -5,7 +5,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Separator } from '../ui/separator';
 import { Input } from '../ui/input';
 import 'react-phone-input-2/lib/style.css'
-import PhoneInputComponent from './phone-input-component';
 import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
 
@@ -15,7 +14,7 @@ const options = [
         { value: "mrs",  label: "Mrs"},
     ]
 
-export const  FormContainer = () => {
+const FormContainer = () => {
     const [selectedOption, setSelectedOption] = useState("");
     const  [phone, setPhone] = useState("");
     
@@ -116,3 +115,5 @@ export const  FormContainer = () => {
     </div>
   )
 }
+
+export default FormContainer;
