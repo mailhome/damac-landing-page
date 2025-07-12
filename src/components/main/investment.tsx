@@ -58,7 +58,7 @@ export default function Investment () {
                 <div 
                 key={item.label} 
                 className="w-full flex items-sart justify-start gap-1 flex-col">
-                    <div className="w-full h-48 relative">
+                    <div className="w-full h-40 relative">
                         <Image 
                         src={item.imgSrc}  
                         alt={item.label}

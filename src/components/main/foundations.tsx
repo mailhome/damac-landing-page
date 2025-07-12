@@ -45,8 +45,8 @@ export default function Foundations () {
 function ContentItems () {
   return (
     <div className='w-full h-full'>
-        <div className="w-full h-auto mx-auto mt-2 grid grid-cols-1 lg:grid-cols-2 xl:gap-x-20 lg:gap-6 gap-y-20">
-          <div className="h-[600px] xl:h-[600px] w-full relative md:order-2">/
+        <div className="w-full h-auto mx-auto mt-2 grid grid-cols-1 lg:grid-cols-2 xl:gap-x-20 lg:gap-6 gap-y-10 lg:gap-y-20">
+          <div className="h-[500px] xl:h-[500px] w-full relative md:order-2">/
             <Image 
             src="/hero-31.jpg" 
             alt='Image' 
@@ -79,9 +79,9 @@ const ContentWhyDemac = ({
   alt
 }: ContentWhyDemacProps) => {
   return (
-    <div className='w-full h-[30vh] lg:h-full  bg-white shadow-md flex flex-col items-center justify-center rounded-md gap-0 xl:gap-4 lg:gap-4 py-10 lg:py-8'>
+    <div className='w-full h-[30vh] lg:h-full  bg-white shadow-md flex flex-col items-center justify-center rounded-md gap-4 xl:gap-4 lg:gap-4 py-10 lg:py-8'>
         {/* TODO: Place a video here */}
-          <div className="flex items-center relative xl:h-20 lg:h-20 2xl:w-80 justify-center">
+          <div className="flex items-center relative xl:h-20 lg:h-20 2xl:w-80 h-16 justify-center">
             <Image 
             src={imgSrc} 
             alt={alt} 

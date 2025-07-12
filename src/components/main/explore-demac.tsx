@@ -9,7 +9,7 @@ import { Button } from '../ui/button'
 
 export default function ExploreDemac () {
   return (
-    <div className='py-10'>
+    <div className='py-10 mt-20 sm:mt-0'>
       <ContentProps 
       title="EXPLORE OUR ICONIC PROPERTIES" 
       label='DAMAC Properties is renowned for crafting luxurious residential towers, world-class communities, and exclusive island resort residences. From elegant DAMAC apartments in Dubai to sophisticated urban sanctuaries, every property blends innovative design with exceptional amenities, delivering an unparalleled living experience.' 

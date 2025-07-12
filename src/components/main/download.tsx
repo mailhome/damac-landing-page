@@ -34,13 +34,13 @@ export default function Download() {
               <p className='2xl:w-10/12 w-full xl:text-2xl text-lg md:text-xl lg:text-xl lg:text-left text-center col-span-8 lg:leading-[2.5rem]'>
                 Manage your DAMAC property effortlessly with the DAMAC Living app. From service requests to secure payments and instant updates, everything you need is just a tap away for a smooth, convenient experience.
               </p>
-              <div className="flex items-center flex-row lg:justify-start justify-center gap-10 w-[300px]">
+              <div className="grid-cols-2 grid gap-4 sm:gap-10 width-container">
                 {items.map((item) => (
                   <Link 
                   key={item.href} 
                   href={item.href} 
                   className='w-full'>
-                  <div className="2xl:w-[250px] w-60 h-20 relative">
+                  <div className="2xl:w-[180px] w-48 h-20 relative">
                         <Image 
                         src={item.imageSrc} 
                         alt={item.imageSrc} 

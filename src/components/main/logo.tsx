@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Logo () {
   return (
-    <div className='text-white relative h-12 w-60 sm:h-12 sm:w-60 md:h-20 md:w-[320px] lg:w-[360px] lg:h-20 xl:w-[250px] xl:h-20'>
+    <div className='text-white relative h-24 w-80 sm:h-24 sm:w-80 md:h-24 md:w-[320px] lg:w-[360px] lg:h-20 xl:w-[250px] xl:h-20'>
       <Image 
       fill 
       alt='Logo' 

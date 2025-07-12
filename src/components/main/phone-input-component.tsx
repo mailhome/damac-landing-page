@@ -10,25 +10,23 @@ type PhoneInputComponentProps = {
         value: string, 
         data: unknown, 
         event: unknown, 
-        formattedValue: string
+        formattedValue: string,
     ) => void;
 }
 
 export default function PhoneInputComponent ({
-    value,
-    onChange
+  value,
+  onChange
 }: PhoneInputComponentProps) {
   return (
     <div className="w-full">
       <PhoneInput 
       country="ng" 
-      value={value} 
-      onChange={onChange} 
       inputClass='w-full text-base h-4 rounded-xl' 
       buttonClass='bg-rose-500'
       containerClass='bg-white items-center justify-start w-full'  
       containerStyle={{ backgroundColor: "#EDEDED", height: 40, }}
-      inputStyle={{ height: "100%", border: "none", width: "100%", fontSize: 16, backgroundColor: "#EDEDED"}}
+      inputStyle={{ height: "100%", border: "none", width: "100%", fontSize: 12, backgroundColor: "#EDEDED"}}
       buttonStyle={{ height: "100%", backgroundColor: "#EDEDED"}}
       searchStyle={{ width: "18vw", height: 40 }}
       dropdownStyle={{ width: "20vw", flex: "left", flexDirection: "column", justifyItems: "left", position: "relative",marginTop: 4}}

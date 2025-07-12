@@ -21,7 +21,7 @@ export default function FormContainer() {
     
 
     const handleChange = (value) => {
-        setSelectedOption(value);
+        setSelectedOption(value);w
     }
 
     const handleSubmit = (e) => {
